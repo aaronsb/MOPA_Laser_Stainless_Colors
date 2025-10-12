@@ -13,6 +13,22 @@ All substrates are polished stainless steel. .048"  (1.2mm) is great because it 
 ![Color Wheel](color_wheel.jpg)
 ![Lightburn Screenshot](lightburn_screenshot.jpg)
 
+For a 100W JPT M7 laser  (Cloudray GM100)
+
+         Speed (mm/s) /  Power (%)  /  Pulse length (ns)  /  Frequency (KHz)  /  Interval (mm)
+Black  800 / 30 / 60 / 300 / .003
+White  800 / 19 / 6 / 1500 / .003
+Gray   800 / 18 / 6 / 1000 / .001
+Purple 800 / 18 / 6 / 367 / .002
+Blue   800 / 18 / 6 / 500 / .002
+Green  800 / 18 / 6 / 570 / .002
+Yellow 800 / 25 / 6 / 200 / .002
+Orange 800 / 20.4 / 6 / 266 / .002
+Red    800 / 18 / 6 / 333 / .002
+Brown  700 / 24.4 / 60 / 300 / .003
+
+
+
 
 
 
