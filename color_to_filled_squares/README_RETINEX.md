@@ -1,5 +1,29 @@
 # Retinex-Enhanced Spatial Dithering for MOPA Laser Color Reproduction
 
+## 🚀 Quick Start - Run This First!
+
+**Want to see the improvements immediately? Run:**
+
+```bash
+cd color_to_filled_squares
+./run_retinex_tests.sh --generate
+```
+
+This will:
+1. ✅ Generate 19 comprehensive color test patterns
+2. ✅ Process each with 3 algorithms (original, retinex_floyd, retinex_atkinson)
+3. ✅ Create 57 SVG files ready for LightBurn
+4. ✅ Generate visual comparison previews
+5. ✅ Organize everything in an easy-to-navigate structure
+
+**Estimated time:** ~1-2 minutes | **Disk space:** ~15-20 MB
+
+**Results:** Check `tests/01_quick_start/svg_for_laser/` for SVG files ready to load into LightBurn!
+
+**Cleanup:** Run `./run_retinex_tests.sh --clean` to remove all generated files
+
+---
+
 ## Overview
 
 This enhanced color processing pipeline dramatically expands the effective color gamut of MOPA laser engraving on stainless steel by combining:
@@ -98,7 +122,29 @@ This is the same principle used in:
 - **Pointillist painting** (Seurat, Signac)
 - **CRT displays** (RGB phosphor triads)
 
-## Usage
+## Organized Test Structure
+
+After running `./run_retinex_tests.sh`, you'll get an organized test suite:
+
+```
+tests/
+├── 01_quick_start/      ← START HERE! Fast tests (5-10 min laser time)
+│   ├── input/           - Source test images
+│   ├── svg_for_laser/   - Load these into LightBurn
+│   │   ├── original/
+│   │   ├── retinex_floyd/
+│   │   └── retinex_atkinson/
+│   └── previews/        - Visual comparisons
+├── 02_gradients/        ← Gradient smoothness tests
+├── 03_color_accuracy/   ← Color patch validation
+└── 04_advanced/         ← Complex tests (HSV, radials)
+```
+
+**Each category includes a README.txt explaining what to test and what to expect.**
+
+---
+
+## Manual Usage
 
 ### Basic Usage
 ```bash
@@ -128,6 +174,30 @@ python color_to_squares_retinex.py logo.png logo_atk.svg 0.25 atkinson
 # No dithering (nearest color only)
 python color_to_squares_retinex.py simple.png simple_none.svg 0.25 none
 ```
+
+## Test Pattern Generation
+
+Generate standard color science test patterns:
+
+```bash
+python generate_test_patterns.py [output_directory]
+```
+
+This creates:
+- **Hue sweeps** at various saturation/value levels
+- **Saturation & value gradients** for primary colors
+- **Radial gradients** for smooth transitions
+- **Color patches** (primaries, secondaries, tertiaries)
+- **Skin tone patches** (Fitzpatrick scale approximation)
+- **HSV color space** visualization
+- **Smooth gradient tests** to evaluate banding
+- **MOPA laser palette** reference
+
+These patterns are specifically designed to reveal:
+- Gradient smoothness (banding detection)
+- Intermediate color reproduction
+- Gamut coverage
+- Quantization artifacts
 
 ## Installation
 
