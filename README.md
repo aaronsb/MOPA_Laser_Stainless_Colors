@@ -5,6 +5,8 @@ I used a Cloudray GM100 MOPA laser engraver with 290mm focal length F-theta lens
 ![GM100](GM100.png)
 
 
+YouTube video for this project: https://www.youtube.com/watch?v=RsGHr7dXLuI
+
 
 All substrates are polished stainless steel. .048"  (1.2mm) is great because it doesn't warp much.  .036" (0.9mm) is acceptable, but thinner metal has a lot of problems with warping.   https://www.mcmaster.com/9785K12/   https://www.mcmaster.com/9785K13/     I used a vacuum chuck to hold the sheet metal flat while engraving:  https://www.ebay.com/itm/276754053418  https://www.clampusystems.com/product-category/vacuum-tables/sg-vacuum-table-series/
 
